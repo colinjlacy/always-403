@@ -10,6 +10,7 @@ spec:
   containers:
   - name: always-403
     image: ghcr.io/colinjlacy/always-403:main
+    imagePullPolicy: Always
     ports:
     - containerPort: 8080
       protocol: TCP
@@ -52,7 +53,7 @@ spec:
   rules:
   - matches:
     - path:
-        type: Exact
+        type: PathPrefix
         value: "/"
     backendRefs:
     - group: ''
