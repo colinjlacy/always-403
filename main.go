@@ -6,7 +6,7 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusForbidden)
+	w.WriteHeader(http.StatusOK)
 }
 
 func main() {
